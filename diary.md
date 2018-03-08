@@ -11,7 +11,7 @@
 
 ----
 ## 2018.03.08
-- [RDD和闭包有什么区别](https://github.com/SunnyZWQ/sparktest/blob/master/%E9%97%AD%E5%8C%85%E4%B8%8ERDD%E7%9A%84%E5%85%B3%E7%B3%BB.md)
+- [RDD与闭包](https://github.com/SunnyZWQ/sparktest/blob/master/%E9%97%AD%E5%8C%85%E4%B8%8ERDD%E7%9A%84%E5%85%B3%E7%B3%BB.md)
 - [RDD的意义](https://github.com/SunnyZWQ/sparktest/blob/master/RDD%E7%9A%84%E6%84%8F%E4%B9%89.md)
 - [spark的容错机制](https://github.com/SunnyZWQ/sparktest/blob/master/spark%E7%9A%84%E5%AE%B9%E9%94%99%E6%9C%BA%E5%88%B6.md)
 
