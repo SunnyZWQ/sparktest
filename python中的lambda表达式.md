@@ -1,5 +1,9 @@
 # spark demo运行（spark-shell）
 
+## WARNING!
+## UNFINISHED!
+## 文字部分有错误，不要看，只看demo
+
 
 ## aggregate函数官方文档的测试
 
