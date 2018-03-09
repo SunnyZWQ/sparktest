@@ -32,3 +32,9 @@
 ###### RDD可以缓解拖延，通过 backup tasks
 #### 内存不够时
 ###### RDDs are shifted to the disks
+
+>The RDD describes the partitions that, when an action is called, become tasks that will read their parts of the input file.
+
+
+---
+### 一个RDD指向所有的数据，所有的数据分布在各个节点上，
