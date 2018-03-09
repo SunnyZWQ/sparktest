@@ -18,3 +18,12 @@
 ### narrow transformation 与 wide transformation
 ![](http://ww1.sinaimg.cn/large/005N2p5vgy1fp5mvvadojj30ia09lq58.jpg)
 ![](http://ww1.sinaimg.cn/large/005N2p5vgy1fp5mwby844j30ib09lac7.jpg)
+
+
+### why RDD in spark ?
+- 使用迭代算法
+- 交互式的data mining tools
+- 弥补了DSM（Distributed Shared Memory）在容错机制上的不足[（点此查看spark容错机制）](https://github.com/SunnyZWQ/sparktest/blob/master/spark%E7%9A%84%E5%AE%B9%E9%94%99%E6%9C%BA%E5%88%B6.md)
+- 存储在HDFS等的文件系统上的数据存储在硬盘上，计算数据时会有I/O、复制、序列化的开销
+    - ***TODO***：RDD在sc.parallelize()时做了什么，使得从硬盘读取的数据加载到内存中变快
+

@@ -10,8 +10,8 @@
 - 从spark streaming获取到的数据
 
 
-- rdd容错的恢复：使用谱系图（lineage graph）
-    - 每一次tansformation都产生一个新的RDD
-    - RDD是自然状态下是保持不变的\
+#### rdd容错的恢复：使用谱系图（lineage graph）
+ - 每一次tansformation都产生一个新的RDD
+ - RDD是自然状态下是保持不变的\
 \
 ===>RDD容易恢复
