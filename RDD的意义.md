@@ -27,3 +27,8 @@
 - 存储在HDFS等的文件系统上的数据存储在硬盘上，计算数据时会有I/O、复制、序列化的开销
     - ***TODO***：RDD在sc.parallelize()时做了什么，使得从硬盘读取的数据加载到内存中变快
 
+### RDD的处理机制分析
+#### Straggler Mitigation
+###### RDD可以缓解拖延，通过 backup tasks
+#### 内存不够时
+###### RDDs are shifted to the disks

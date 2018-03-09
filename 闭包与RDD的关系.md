@@ -35,6 +35,6 @@ print("Counter value: ", counter)
 
 ## 总结
 >对全局变量的更改，不适合闭包，更适合Accumulator处理 \
->对于local运行的循环或者方法，可以使用闭包在executor间进行传递
+对于local运行的循环或者方法，可以使用闭包在executor间进行传递
 
 

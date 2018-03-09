@@ -15,3 +15,8 @@
  - RDD是自然状态下是保持不变的\
 \
 ===>RDD容易恢复
+
+### DSM的容错机制
+>DSM – Fault tolerance is achieved by a checkpointing technique which allows applications to roll back to a recent checkpoint rather than restarting.
+###### DSM的容错机制是依靠 断点机制，只能回滚到最近的断点
+
