@@ -47,9 +47,13 @@ RDDs are fault-tolerant, parallel data structures that let users explicitly pers
 If you want the full details on what an RDD is, read one of the core Spark academic papers, Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing（RDD论文）\
 [source](https://stackoverflow.com/questions/34433027/what-is-rdd-in-spark?rq=1)
 
+###### RDD本质上是一个spark上数据集的代表，分布在多个节点上，提供API-->可以作用在RDD之上
 
 
->When Spark reads a file from HDFS, it creates a single partition for a single input split. Input split is set by the Hadoop InputFormat used to read this file. For instance, if you use textFile() it would be TextInputFormat in Hadoop, which would return you a single partition for a single block of HDFS (but the split between partitions would be done on line split, not the exact block split), unless you have a compressed text file. In case of compressed file you would get a single partition for a single file (as compressed text files are not splittable).\
+
+>When Spark reads a file from HDFS, it creates a single partition for a single input split. Input split is set by the Hadoop InputFormat used to read this file. For instance, if you use textFile() it would be TextInputFormat in Hadoop, which would return you a single partition for a single block of HDFS **(but the split between partitions would be done on line split, not the exact block split)**, unless you have a compressed text file. In case of compressed file you would get a single partition for a single file (as compressed text files are not splittable).\
 When you call rdd.repartition(x) it would perform a shuffle of the data from N partititons you have in rdd to x partitions you want to have, partitioning would be done on round robin basis.\
 If you have a 30GB uncompressed text file stored on HDFS, then with the default HDFS block size setting (128MB) it would be stored in 235 blocks, which means that the RDD you read from this file would have 235 partitions. When you call repartition(1000) your RDD would be marked as to be repartitioned, but in fact it would be shuffled to 1000 partitions only when you will execute an action on top of this RDD (lazy execution concept)\
 [source](https://stackoverflow.com/questions/29011574/how-does-spark-partitioning-work-on-files-in-hdfs)
+
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fp6ub4jmrjj31hn0tpn05.jpg)
