@@ -23,6 +23,8 @@ DStream是有序的RDDs的组合
 
 基于spark streaming 的 NetworkWordCount（伪代码，python）
 
+[查看详细代码点击此处](https://github.com/apache/spark/blob/v2.3.0/examples/src/main/python/streaming/network_wordcount.py)
+
     from pyspark import SparkContext
     from pyspark.streaming import StreamingContext
 
