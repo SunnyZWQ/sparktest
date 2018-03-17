@@ -84,7 +84,9 @@ DStream是有序的RDDs的组合
 3. 在并行接收多个data stream时，需要创建多个input DStream，以及等数量的Reciever
 4.  Spark Streaming application需要分配足够多的cores，不然没分配到core的receiver或者input DStream会不工作
 
-
+tips：
+1. 当以local模式运行时，指定master URL时，使用“local[n]”【n > receivers】
+2. 分布式同理，分配的cores数量 > receivers，否则只能接收数据，不能处理数据
 
 
 
