@@ -63,7 +63,7 @@ DStream是有序的RDDs的组合
 - 每一个Input DStream对应一个Receiver。
 
 - Steaming sources
-    - Basic sources: file systems, socket connections
+    - Basic sources: file systems, socket connections(可以直接从 StreamingContext API 中获取的)
     - Advanced sources: Kafka, Flume, Kinesis, etc
 
 
@@ -82,14 +82,27 @@ DStream是有序的RDDs的组合
 1. 一个input DStream需要一个core
 2. 一个Receiver需要一个core
 3. 在并行接收多个data stream时，需要创建多个input DStream，以及等数量的Reciever
-4.  Spark Streaming application需要分配足够多的cores，不然没分配到core的receiver或者input DStream会不工作
+4.  Spark Streaming application需要分配足够多的cores，不然没分配到core的receiver或者executor会不工作
+5.  通常，cores的数量 > receivers数量
 
 tips：
 1. 当以local模式运行时，指定master URL时，使用“local[n]”【n > receivers】
 2. 分布式同理，分配的cores数量 > receivers，否则只能接收数据，不能处理数据
+3. **FileStream不需要Receiver，因此不需要分配cores给Receiver**
+4. Python不能用fileStream，但是可以用textFileStream
 
 
+## Spark Streaming 如何实现实时的数据传输
 
+streaming会监视被指定的数据源的地址，一旦有新的文件产生，streaming就会对新产生的文件进行处理
+
+**tips：**
+1. "hdfs://namenode:8040/logs/"
+2. "hdfs://namenode:8040/logs/2017/*"
+3. 判断一个文件是不是一个时间周期的一部分，要根据它的修改时间，而不是创建时间。
+
+#### 如何避免文件被重复处理——忽视更新
+“忽视更新”：文件被streaming处理后，造成的文件更改，在当前窗口不会重新读取文件，这样避免了文件的重复处理
 
 
 
