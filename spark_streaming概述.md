@@ -104,10 +104,25 @@ streaming会监视被指定的数据源的地址，一旦有新的文件产生�
 #### 如何避免文件被重复处理——忽视更新
 “忽视更新”：文件被streaming处理后，造成的文件更改，在当前窗口不会重新读取文件，这样避免了文件的重复处理
 
+#### 如何避免文件在窗口内，还没来得及更改，窗口就已经被关闭
 
+- “Full Filesystems” like HDFS
+    - 一旦 output stream 被创建，就在需要被更改的文件上设立modification time。在文件打开时，即使数据还没被完全写入，就已经创立在这个文件上的RDD-->DStream
+    - 在此之后，对同一窗口内的文件更新将被忽略。也就是说，可能会丢失更改，或者从流中丢弃数据。
 
+    - 结论：为了保证这些更改在一个窗口内进行，将文件写入一个不被streaming监视的地址里，然后在output stream结束时，立刻将这个文件地址改成目标地址（被监视的）。在这个窗口的创立期间，保证文件出现在监视地址内，那么就能监视到新的数据。
 
+- Object Stores such as Amazon S3 and Azure Storage
+    - 这种文件系统在更改文件路径时会运行的很慢，因为数据是被copy进去的。而且，对文件的更改，不仅包括文件更改时间，还包括rename time。因此，可能不会包含在这个文件对应的window的一部分。
+    - 结论：对于object store filesystem，正确的策略是直接将数据写入目标文件（被监视的）
 
+## 使用测试数据对Spark Streaming Application进行测试
+
+create a DStream based on a queue of RDDs
+
+    streamingContext.queueStream(queueOfRDDs)
+
+每个被push到这个队列RDD会被当做 DStream 的 a batch of data，并且像一个stream一样被处理，[点此查看详细python API](http://spark.apache.org/docs/latest/api/python/pyspark.streaming.html#pyspark.streaming.StreamingContext)
 
 
 
