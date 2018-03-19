@@ -171,7 +171,16 @@ func can have one argument of rdd, or have two arguments of (time, rdd)
 因此，如果你的application中没有output operations 或者是 你的output operation中不含有对RDD的actions(如：dstream.foreachRDD()），那么不会执行任何操作。系统只会接收数据，然后抛弃数据。
 
 
+## 使用 foreachRDD 的设计模式
+    def sendPartition(iter):
+        # ConnectionPool is a static, lazily initialized pool of connections
+        connection = ConnectionPool.getConnection()
+        for record in iter:
+            connection.send(record)
+        # return to the pool for future reuse
+        ConnectionPool.returnConnection(connection)
 
+    dstream.foreachRDD(lambda rdd: rdd.foreachPartition(sendPartition))
 
 
 
