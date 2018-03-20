@@ -11,7 +11,7 @@
 
 ----
 
-- [ ] pro4新建虚拟机（快照：JDK1.8）
+- [ ] pro4新建虚拟机（快照：JDK1.8）（新建路由器）
 - [ ] ambari环境搭建
 - [ ] win上的虚拟机安装Git
 - [ ] win上的虚拟机的scrapy代码push到Git中
