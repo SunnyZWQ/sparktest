@@ -18,6 +18,7 @@
 - [ ] pro4上的毕设虚拟机git clone scrapy代码
 - [ ] 将之前翻译的ambari文档使用rst格式整理
 - [ ] 完善spark_to_all
+- [ ] 整理streaming笔记
 
 
 ----
