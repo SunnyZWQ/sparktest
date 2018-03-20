@@ -193,7 +193,7 @@ func can have one argument of rdd, or have two arguments of (time, rdd)
 - 使用stateful transformations时
     - updateStateByKey
     - reduceByKeyAndWindow (with inverse function) 
-- 使用Metadata checkpoint恢复application的driver
+- 使用Metadata checkpointing恢复application的driver
 
 
 
