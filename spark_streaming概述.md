@@ -194,6 +194,19 @@ func can have one argument of rdd, or have two arguments of (time, rdd)
     - updateStateByKey
     - reduceByKeyAndWindow (with inverse function) 
 - 使用Metadata checkpointing恢复application的driver
+- 注：一些简单的applications可能不需要stateful transformations，或者metadata checkpointing
+
+#### checkpointing的配置
+
+在一个可靠的、具有容错机制的文件系统中设置目录，即可使用checkpointing。信息将会被存储到这个目录中。
+
+- 对于data checkpointing
+
+    streamingContext.checkpoint(checkpointDirectory)
+
+- 对于metadata checkpointing，需要重写你的application，使它具有以下行为：
+    - 程序第一次启动时，它会创造一个新的StreamingContext，建立所有的streams，然后调用start()方法。
+    - 程序运行失败后重启时，它会从断点目录的断点数据重建一个StreamingContext
 
 
 
