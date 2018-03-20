@@ -182,6 +182,19 @@ func can have one argument of rdd, or have two arguments of (time, rdd)
 
     dstream.foreachRDD(lambda rdd: rdd.foreachPartition(sendPartition))
 
+## 关于Checkpointing
+
+分类：
+- Metadata checkpointing——恢复driver node（运行driver program的node）
+- Data checkpointing——将生成的RDD保存到可靠的存储系统中
+
+### 什么时候需要用Checkpointing
+
+- 使用stateful transformations时
+    - updateStateByKey
+    - reduceByKeyAndWindow (with inverse function) 
+- 使用Metadata checkpoint恢复application的driver
+
 
 
 
