@@ -202,6 +202,23 @@ scp指令如下：
 ![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkjcvpgfwj321u11ynpf.jpg)
 
 
+## 下载ambari及HDP库
+
+[ambari-2.6.1.0](http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.1.0/ambari-2.6.1.0-centos7.tar.gz)
+
+[HDP-2.6.4.0](http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.4.0/HDP-2.6.4.0-centos7-rpm.tar.gz)
+
+[HDP-UTILS-1.1.0.22](http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.22/repos/centos7/HDP-UTILS-1.1.0.22-centos7.tar.gz)
+
+[如果使用的不是centos7，点击此处跳转到官网查看下载地址](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-installation/content/ambari_repositories.html)
+
+
+
+
+
+
+
+
 
 
 
