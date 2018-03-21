@@ -96,13 +96,38 @@ zwq0作为master，其余的作为slave
         yum install -y openssh-clients
 
 
+## 设置SSH免密登录
+
+1. 生成SSH密钥（操作主机：0，1，2，3）
+
+        cd ~
+        mkdir .ssh
+        ssh-keygen -t rsa
+
+        cd .ssh
+        ls
+        cat id_rsa.pub >> authorized_keys
+        ls
+        cd ..
+        chmod 700 .ssh
+        chmod 600 .ssh/*
+
+注意：在输入密码时，一律按回车键，这样密码就会设为空
+
+2. 验证SSH免密登录是否成功：
+    
+        ssh zwq0
+第一次登录时需要输入yes，之后就不用了~~
+
+其余的3个节点都进行同样的操作
+
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fpkho8zo2dj316k14i1ky.jpg)
 
 
-
-
-
-
-
+验证成功后，输入
+    
+    exit
+退出SSH连接（操作主机：0，1，2，3）
 
 
 
