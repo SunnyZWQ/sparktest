@@ -6,7 +6,60 @@
 
 zwq0作为master，其余的作为slave
 
-1. 修改主机名
+**在本文中，为了方便，简称为主机0，1，2，3**
+
+### 1. 修改主机名（操作主机：0，1，2，3）
+
+    vim /etc/sysconfig/network
+    
+在文件中追加：
+    
+    HOSTNAME=zwq0
+
+完成之后主机名会有变化，如下图
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fpkf04ynn1j321q11wqv7.jpg)
+
+如果没有变化，执行
+
+    reboot
+重启主机之后就能看到了
+
+### 2. 关于用户组
+
+这个集群是我平时自己用来学习、测试用的。\
+既然只有自己一个人用，就没有必要设置用户组来限制其他人使用的权限。\
+所以，接下来的ambari用户就是root了~~
+
+### 3. 设置集群主机的内网地址
+首先获取本机的内网地址
+
+    ifconfig
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fpkfaywo29j31ks13i190.jpg)
+
+对主机0，1，2，3都执行相同的指令，并记录每一台主机的内网地址。
+
+接下来，设置/etc/hosts（操作主机：0,1,2,3）
+
+    vim /etc/hosts
+
+追加集群内所有主机的地址
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fpkffitbzxj31ks13i43u.jpg)
+
+
+### 4. 关闭防火墙（操作主机：0，1，2，3）
+查看防火墙状态
+
+    service iptables status
+
+临时关闭防火墙
+
+    service iptables stop
+
+永久关闭防火墙（推荐）
+
+    chkconfig iptables off
+
+
 
 
 
