@@ -84,6 +84,16 @@ zwq0作为master，其余的作为slave
 
 为了方便，我不再额外安装数据库，仅使用ambari默认安装的数据库。
 
+如果想使用已经存在的数据库，可[点此查看官网教程](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.5/bk_ambari-administration/content/using_existing_databases_-_ambari.html)
+
+- ambari组件的大小
+
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkh6jz9c0j31040eigod.jpg)
+
+- 安装相关服务
+        
+        yum -y install lrzsz
+        yum install -y openssh-clients
 
 
 
