@@ -202,7 +202,7 @@ scp指令如下：
 ![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkjcvpgfwj321u11ynpf.jpg)
 
 
-## 下载ambari及HDP库
+## 下载ambari及HDP库（操作节点：0）
 
 [ambari-2.6.1.0](http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.1.0/ambari-2.6.1.0-centos7.tar.gz)
 
@@ -214,7 +214,9 @@ scp指令如下：
 
 
 
+## 安装ambari（操作节点：0）
 
+### 准备工作
 
 
 
