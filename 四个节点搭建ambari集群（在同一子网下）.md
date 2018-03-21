@@ -130,5 +130,32 @@ zwq0作为master，其余的作为slave
 退出SSH连接（操作主机：0，1，2，3）
 
 
+3. 将节点1，2，3的密钥拷贝到节点0中的authorized_keys文件中
+
+在1，2，3中执行如下代码
+
+    cat ~/.ssh/id_rsa.pub | ssh root@zwq0 'cat >> ~/.ssh/authorized_keys'
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkhyuu6f2j31ks13i7lk.jpg)
+
+
+4. 将zwq0的authorized_keys文件分发到所有节点上面，在节点0上执行如下代码
+
+        cd ~/.ssh
+        scp -r authorized_keys root@zwq1:~/.ssh/
+        scp -r authorized_keys root@zwq2:~/.ssh/
+        scp -r authorized_keys root@zwq3:~/.ssh/
+
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpki2vy5a9j31ks13i1d2.jpg)
+
+
+## 安装JDK（操作节点：0，1，2，3）
+
+
+
+
+
+
+
+
 
 
