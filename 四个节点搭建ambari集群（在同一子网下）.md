@@ -150,6 +150,57 @@ zwq0作为master，其余的作为slave
 
 ## 安装JDK（操作节点：0，1，2，3）
 
+1. 下载JDK
+
+OpenJDK经常会出现各种问题，所以安装Oracle JDK，在[官网](http://www.oracle.com/technetwork/java/javase/downloads/index.html)下载压缩包
+
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkibn33m3j30um0h444i.jpg)
+
+下载后，使用xftp（Windows）或者scp（Mac）传输到四个节点上
+
+在四个节点新建文件夹，用于安装JDK
+
+    mkdir ~/java
+
+scp指令如下：
+
+    scp jdk-8u161-linux-x64.tar.gz root@10.0.217.93:~/java/
+
+
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkixgm4mqj327m0j0qfl.jpg)
+
+2. 安装JDK（操作节点：0，1，2，3）
+
+        cd ~/java
+        tar -zxvf jdk-8u161-linux-x64.tar.gz
+
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkj2qo5dsj322e12w1l0.jpg)
+
+3. 配置Java环境变量
+
+        vim /etc/profile
+
+追加如下内容：
+        
+    JAVA_HOME=/root/java/jdk1.8.0_161
+    CLASSPATH=.:$JAVA_HOME/lib.tools.jar
+    PATH=$JAVA_HOME/bin:$PATH
+    export JAVA_HOME CLASSPATH PATH
+
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fpkj5hat1fj31ks13i12l.jpg)
+
+使环境变量生效：
+
+    source /etc/profile
+
+验证是否配置成功：
+
+    java -version
+
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkj8fcyh6j31ks13iaqy.jpg)
+
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkjcvpgfwj321u11ynpf.jpg)
+
 
 
 
