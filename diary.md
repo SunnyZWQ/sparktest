@@ -11,11 +11,11 @@
 
 ----
 
-- [ ] pro4新建虚拟机（快照：JDK1.8）（新建路由器）
+- [x] pro4新建虚拟机（快照：JDK1.8）（新建路由器）
 - [ ] ambari环境搭建
-- [ ] win上的虚拟机安装Git
-- [ ] win上的虚拟机的scrapy代码push到Git中
-- [ ] pro4上的毕设虚拟机git clone scrapy代码
+- [x] win上的虚拟机安装Git
+- [x] win上的虚拟机的scrapy代码push到Git中
+- [x] pro4上的毕设虚拟机git clone scrapy代码
 - [ ] 将之前翻译的ambari文档使用rst格式整理
 - [ ] 完善spark_to_all
 - [ ] 整理streaming笔记
