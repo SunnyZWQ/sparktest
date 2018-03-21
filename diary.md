@@ -20,6 +20,14 @@
 - [ ] 完善spark_to_all
 - [ ] 整理streaming笔记
 
+----
+streaming笔记输出
+
+- [ ] receiver和processor的具体的交互过程
+- [ ] block, interval, batch
+- [ ] streaming如何实现实时交互
+- [ ] update streaming application时需要注意什么
+
 
 ----
 ## 2018.03.08
