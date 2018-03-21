@@ -1,4 +1,4 @@
-## 在四个节点上搭建ambari集群（在同一子网下）（centos7.3 64bit）
+## 在四个节点上搭建ambari集群(ambari版本：2.6.1.0)（HDP版本：2.6.4）（在同一子网下）（centos7.3 64bit）
 
 环境：四个节点，都是centos7.3 64bit操作系统
 
@@ -7,6 +7,8 @@
 zwq0作为master，其余的作为slave
 
 **在本文中，为了方便，简称为主机0，1，2，3**
+
+## 配置网络环境
 
 ### 1. 修改主机名（操作主机：0，1，2，3）
 
@@ -58,6 +60,33 @@ zwq0作为master，其余的作为slave
 永久关闭防火墙（推荐）
 
     chkconfig iptables off
+
+### 5. 关闭selinux（操作主机：0，1，2，3）
+
+    vim /etc/selinux/config
+
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fpkfmo94nsj31j811yn4r.jpg)
+
+
+## ambari需要安装的软件
+
+- yum
+- rpm
+- scp, curl, unzip, tar, and wget
+- centos7需要安装2.7.x版本的Python
+- JDK：如果要安装HDP2.6.4，官网要求：
+    - Open Source JDK：JDK8+
+    - Oracle JDK：默认JDK8,64bit，最小JDK 1.8.0_77
+- 数据库：官网说明：在安装ambari时，会默认在ambari server上安装PostgreSQL，ambari支持自动安装的Postgres数据库，但你也可以选择其他数据库
+
+官网声明的ambari支持的数据库如下：
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fpkgztkol0j30xq0j4td4.jpg)
+
+为了方便，我不再额外安装数据库，仅使用ambari默认安装的数据库。
+
+
+
+
 
 
 
