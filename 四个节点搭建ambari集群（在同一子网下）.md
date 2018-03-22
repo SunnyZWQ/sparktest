@@ -218,6 +218,12 @@ scp指令如下：
 
 ### 准备工作
 
+ambari安装可以联网安装也可以用本地库安装。联网安装会出现各种网络问题，坑很多，推荐选择本地安装。用上面的链接下载tar.gz到本地，再进行解压安装。
+
+用本地安装需要做如下的准备工作：
+
+    yum install yum-utils createrepo
+    yum install httpd
 
 
 
