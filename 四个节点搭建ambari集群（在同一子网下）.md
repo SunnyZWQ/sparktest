@@ -222,16 +222,38 @@ ambari安装可以联网安装也可以用本地库安装。联网安装会出�
 
 用本地安装需要做如下的准备工作：
 
-    yum install yum-utils createrepo
-    yum install httpd
+- 安装必备的软件
+
+        yum install yum-utils createrepo
+        yum install httpd
+        service httpd start
+
+- 创建资源目录
+
+        mkdir -p /var/www/html/
+
+- 创建如下文件夹
+
+        cd /var/www/html
+        mkdir -p /var/www/html/Ambari-2.6.1.0/centos7/
+        mkdir -p /var/www/html/hdp/HDP/centos7/2.x/updates/2.6.4.0-91
+        mkdir -p /var/www/html/hdp/HDP-UTILS-1.1.0.22/repos/centos7
+
+- 在这三个路径中分别解压ambari, hdp, hdp-utils包
+
+- 准备repo文件以使用本地repository安装
+
+        wget http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.1.0/ambari.repo
 
 
+----
 
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fplp5umqmwj32801e0tnr.jpg)
 
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fplp7r7j7fj31qs17g4m6.jpg)
 
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fplq5w1gr8j32801e2am1.jpg)
 
+![](http://ww1.sinaimg.cn/large/005N2p5vgy1fplqu8rqlcj32801ds4a4.jpg)
 
-
-
-
-
+https://community.hortonworks.com/questions/39675/connection-failed-errno-111-connection-refused-to.html
