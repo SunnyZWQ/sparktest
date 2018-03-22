@@ -44,6 +44,11 @@ streaming ----abstraction----> DStream
 
 output stream 与 modification time：
 
+- 对于完整的文件系统（如HDFS）：当打开一个文件时，甚至数据还没有被完全写入，这个文件就被包含在DStream里了。这个时间就是文件的modification time。
+- 在这之后，在同一个window下的对文件的更新都会被忽视
+- 这意味着：更改可能被忽视，数据可能从stream中丢失
+- 为了保证在一个窗口内能够完成全部的更新，将文件写入到一个未被监视的地址中，在output stream关闭之后，立刻将文件重命名到目标地址。
+
 "忽视更新"：
 
 
