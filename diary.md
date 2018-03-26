@@ -28,6 +28,8 @@ streaming笔记输出
 - [ ] streaming如何实现实时交互
 - [ ] update streaming application时需要注意什么
 - [ ] kafka, flume之类的组件起到了什么作用
+- [ ] 如果没有window，那么输入流和输出流的工作流程是怎样的
+- [ ] window的应用场景
 
 
 ----
