@@ -86,7 +86,7 @@ Spark Streaming 其实是对 Spark Core 的进一步加工：
 - Storm 并没有存储系统，因此不能将数据持久化。能够处理的数据量要根据内存的容量。
 
 
-
+## TODO：spark 调研——机器学习
 
 
 
