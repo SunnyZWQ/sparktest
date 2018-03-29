@@ -66,20 +66,20 @@ MapReduce可以进行离线大数据的处理。
     - 处理的数据量更大
 
 
-Storm与Spark Streaming都是基于内存计算。
+>Storm与Spark Streaming都是基于内存计算。
 
-但是Storm对实时的处理机制是“事件触发”，有事件就可以触发。Spark Streaming对实时的处理机制是处理一定时间间隔内出现/更新的数据。
+>但是Storm对实时的处理机制是“事件触发”，有事件就可以触发。Spark Streaming对实时的处理机制是处理一定时间间隔内出现/更新的数据。
 
-Storm可以达到毫秒级的实时计算延迟度，而Spark Streaming只能达到秒级的计算延迟度。
+>Storm可以达到毫秒级的实时计算延迟度，而Spark Streaming只能达到秒级的计算延迟度。
 
-虽然Storm和Spark Streaming都是基于内存计算，但是Storm不支持对计算结果的保存。而Spark Streaming使用的计算原理是Spark core，也就是说能够实现数据的持久化。因此Spark Streaming的吞吐量更大。
+>虽然Storm和Spark Streaming都是基于内存计算，但是Storm不支持对计算结果的保存。而Spark Streaming使用的计算原理是Spark core，也就是说能够实现数据的持久化。因此Spark Streaming的吞吐量更大。
 
+#### 为什么Storm实时度更高？（Storm：毫秒，Spark Streaming：秒）
 
+- Storm对实时的处理机制是“事件触发”，有事件就立即进行处理。
+- Spark Streaming对实时的处理机制是：处理一定时间间隔内 出现/更新 的数据。
 
-
-
-
-
+#### 为什么 Spark Streaming 吞吐量大
 
 
 
