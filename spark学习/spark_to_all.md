@@ -81,7 +81,10 @@ MapReduce可以进行离线大数据的处理。
 
 #### 为什么 Spark Streaming 吞吐量大
 
-
+Spark Streaming 其实是对 Spark Core 的进一步加工：
+- 对于数据的接收：接收一定时间间隔内的数据。
+- 对于数据的处理：可以一次性处理大量数据，处理数据的原理采用Spark Core的处理原理，因此延续了 Spark Core 的特性。
+- Spark Streaming
 
 
 
