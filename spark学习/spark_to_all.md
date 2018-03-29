@@ -72,7 +72,7 @@ Storm与Spark Streaming都是基于内存计算。
 
 Storm可以达到毫秒级的实时计算延迟度，而Spark Streaming只能达到秒级的计算延迟度。
 
-虽然Storm和Spark Streaming都是基于内存计算，但是Storm不支持对计算结果的保存（如果数据不大，可以保存在内存里）。而Spark Streaming使用的计算原理是Spark core，也就是说能够实现数据的持久化。因此Spark Streaming的吞吐量更大。
+虽然Storm和Spark Streaming都是基于内存计算，但是Storm不支持对计算结果的保存。而Spark Streaming使用的计算原理是Spark core，也就是说能够实现数据的持久化。因此Spark Streaming的吞吐量更大。
 
 
 
