@@ -41,8 +41,6 @@ Hadoop中用于计算的组件有两个：
 2. 存储
     - HDFS
     - HBase
-    - Hive
-    - Pig
 
 
 ### Spark 出现的原因 
@@ -84,7 +82,8 @@ MapReduce可以进行离线大数据的处理。
 Spark Streaming 其实是对 Spark Core 的进一步加工：
 - 对于数据的接收：接收一定时间间隔内的数据。
 - 对于数据的处理：可以一次性处理大量数据，处理数据的原理采用Spark Core的处理原理，因此延续了 Spark Core 的特性。
-- Spark Streaming
+- Spark Core 的一个特性是持久化，因此保证了 Spark Streaming 可以有比 Storm 更大的吞吐量。
+- Storm 并没有存储系统，因此不能将数据持久化。能够处理的数据量要根据内存的容量。
 
 
 
