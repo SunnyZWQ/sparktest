@@ -52,20 +52,27 @@ MapReduce可以进行离线大数据的处理。
 - 速度慢（在硬盘上进行处理）。
 
 因此出现了Spark。Spark可以将MapReduce的处理速度提高10-100倍。
-- 基于内存计算，中间结果可以保存在内存内，方便下次计算，减少了磁盘I/O
+- 基于内存计算，中间结果可以保存在内存中，方便下次计算，减少了磁盘I/O
 - 对比MapReduce单一的处理方式，Spark可以自定义处理的函数，更灵活。
 
 
 ### 实时处理的技术对比
 
+1. Storm
+    - 实时度更高
 
 
+2. Spark Streaming
+    - 处理的数据量更大
 
 
+Storm与Spark Streaming都是基于内存计算。
 
+但是Storm对实时的处理机制是“事件触发”，有事件就可以触发。Spark Streaming对实时的处理机制是处理一定时间间隔内出现/更新的数据。
 
+Storm可以达到毫秒级的实时计算延迟度，而Spark Streaming只能达到秒级的计算延迟度。
 
-
+虽然Storm和Spark Streaming都是基于内存计算，但是Storm不支持对计算结果的保存（如果数据不大，可以保存在内存里）。而Spark Streaming使用的计算原理是Spark core，也就是说能够实现数据的持久化。因此Spark Streaming的吞吐量更大。
 
 
 
