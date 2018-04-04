@@ -1,3 +1,13 @@
+https://www.oschina.net/translate/beyond-storm-for-streaming-data-applications
+
+https://blog.csdn.net/cainiaoxiaozhou/article/details/77261843
+
+https://blog.csdn.net/yangbutao/article/details/44538637
+
+http://www.aboutyun.com/thread-9912-1-1.html
+
+http://calvin1978.blogcn.com/articles/stormnotes.html
+
 ### storm 的流处理方案不仅需要storm
 
 Storm通常使用Kafka用于数据采集，而Storm和Kafka都需要Zookeeper用于管理状态。最后，还需要第四个系统用于管理状态。最终，当所有工作完成后，一个3结点（指计算节点）的Storm集群会很轻易地消耗掉12个结点！
