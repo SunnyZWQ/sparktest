@@ -1,0 +1,88 @@
+
+
+
+
+
+2018-04-09 15:11:54,996 [CRITICAL] [HARD] [SMARTSENSE] [smartsense_server_process] (SmartSense Server Process) SmartSense HST Server connection failed: [Errno 111] Connection refused to zwq0:9000
+2018-04-09 15:11:55,001 [WARNING] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [1], total: [4]
+2018-04-09 15:12:46,992 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq2
+2018-04-09 15:12:46,998 [CRITICAL] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [2], total: [4]
+2018-04-09 15:12:48,920 [UNKNOWN] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) There are no instances of the aggregated alert.
+2018-04-09 15:14:27,836 [WARNING] [HARD] [AMBARI] [ambari_server_component_version] (Component Version) The following components are reporting unexpected versions:
+  zwq1
+    HDFS_CLIENT: UNKNOWN
+    SECONDARY_NAMENODE: UNKNOWN
+
+2018-04-09 15:24:13,097 [UNKNOWN] [HARD] [ZOOKEEPER] [zookeeper_server_process] (ZooKeeper Server Process) There is a problem with the alert definition: 'ascii' codec can't decode byte 0xe6 in position 12: ordinal not in range(128)
+2018-04-09 15:24:13,105 [UNKNOWN] [HARD] [ZOOKEEPER] [zookeeper_server_process_percent] (Percent ZooKeeper Servers Available) There are alerts with a state of UNKNOWN.
+2018-04-09 15:24:17,102 [UNKNOWN] [HARD] [YARN] [yarn_nodemanager_webui] (NodeManager Web UI) There is a problem with the alert definition: 'ascii' codec can't decode byte 0xe6 in position 27: ordinal not in range(128)
+2018-04-09 15:24:17,103 [UNKNOWN] [HARD] [HDFS] [datanode_process] (DataNode Process) There is a problem with the alert definition: 'ascii' codec can't decode byte 0xe6 in position 12: ordinal not in range(128)
+2018-04-09 15:24:17,105 [UNKNOWN] [HARD] [HDFS] [datanode_webui] (DataNode Web UI) There is a problem with the alert definition: 'ascii' codec can't decode byte 0xe6 in position 27: ordinal not in range(128)
+2018-04-09 15:24:17,113 [UNKNOWN] [HARD] [YARN] [yarn_nodemanager_webui_percent] (Percent NodeManagers Available) There are alerts with a state of UNKNOWN.
+2018-04-09 15:24:17,115 [UNKNOWN] [HARD] [HDFS] [datanode_process_percent] (Percent DataNodes Available) There are alerts with a state of UNKNOWN.
+2018-04-09 15:24:20,095 [UNKNOWN] [HARD] [ZOOKEEPER] [zookeeper_server_process] (ZooKeeper Server Process) There is a problem with the alert definition: 'ascii' codec can't decode byte 0xe6 in position 12: ordinal not in range(128)
+2018-04-09 15:25:10,935 [OK] [HARD] [AMBARI] [ambari_server_agent_heartbeat] (Ambari Agent Heartbeat) zwq1 is healthy
+2018-04-09 15:28:10,935 [OK] [HARD] [AMBARI] [ambari_server_component_version] (Component Version) All components are reporting their expected versions.
+2018-04-09 15:28:10,942 [OK] [HARD] [AMBARI] [ambari_server_stale_alerts] (Ambari Server Alerts) All alerts have run within their time intervals.
+2018-04-09 15:28:51,093 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq1
+2018-04-09 15:28:51,100 [WARNING] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [1], total: [4]
+2018-04-09 15:28:52,095 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq3
+2018-04-09 15:28:52,097 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq0
+2018-04-09 15:28:52,102 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq2
+2018-04-09 15:28:52,104 [CRITICAL] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [3], total: [4]
+2018-04-09 15:32:52,101 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-09 15:27:05.
+2018-04-09 15:33:10,940 [WARNING] [HARD] [AMBARI] [ambari_server_component_version] (Component Version) The following components are reporting unexpected versions:
+  zwq0
+    KNOX_GATEWAY: UNKNOWN
+
+2018-04-09 15:42:52,093 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is running on zwq1
+2018-04-09 15:42:52,095 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is running on zwq0
+2018-04-09 15:42:53,092 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is running on zwq3
+2018-04-09 15:42:53,095 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is running on zwq2
+2018-04-09 15:42:53,098 [WARNING] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [1], total: [4]
+2018-04-09 15:42:53,103 [OK] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [0], total: [4]
+2018-04-09 15:43:52,098 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-09 15:27:05.
+2018-04-09 16:05:52,107 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq1
+2018-04-09 16:05:52,109 [CRITICAL] [HARD] [AMBARI_METRICS] [grafana_webui] (Grafana Web UI) Connection failed to http://zwq0:3000 (<urlopen error [Errno 111] Connection refused>)
+2018-04-09 16:05:52,109 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq0
+2018-04-09 16:05:52,111 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq3
+2018-04-09 16:05:52,112 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is NOT running on zwq2
+2018-04-09 16:05:52,118 [CRITICAL] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [3], total: [4]
+2018-04-09 16:05:52,120 [CRITICAL] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [4], total: [4]
+2018-04-09 16:08:10,950 [OK] [HARD] [AMBARI] [ambari_server_component_version] (Component Version) All components are reporting their expected versions.
+2018-04-09 16:08:28,379 [UNKNOWN] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) There are no instances of the aggregated alert.
+2018-04-09 20:14:06,988 [WARNING] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [1], total: [4]
+2018-04-09 20:24:05,982 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_monitor_process] (Metrics Monitor Status) Ambari Monitor is running on zwq0
+2018-04-09 20:24:05,993 [OK] [HARD] [AMBARI_METRICS] [metrics_monitor_process_percent] (Percent Metrics Monitors Available) affected: [0], total: [4]
+2018-04-09 20:29:05,985 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-09 20:23:50.
+2018-04-09 20:40:05,985 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-09 20:23:50.
+2018-04-09 21:24:05,986 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has not been auto-started and is running normally since 2018-04-09 21:23:51.
+2018-04-09 21:29:05,988 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-09 21:23:51.
+2018-04-09 21:40:06,045 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-09 21:23:51.
+2018-04-09 22:24:05,986 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has not been auto-started and is running normally since 2018-04-09 22:23:55.
+2018-04-09 22:29:05,986 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-09 22:23:55.
+
+2018-04-10 04:40:05,986 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-10 04:24:26.
+2018-04-10 05:25:05,986 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has not been auto-started and is running normally since 2018-04-10 05:24:29.
+2018-04-10 05:30:06,986 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-10 05:24:29.
+2018-04-10 05:40:05,986 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-10 05:24:29.
+2018-04-10 06:25:05,986 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has not been auto-started and is running normally since 2018-04-10 06:24:38.
+2018-04-10 06:30:06,984 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-10 06:24:38.
+2018-04-10 06:40:05,984 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-10 06:24:38.
+2018-04-10 07:25:06,986 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has not been auto-started and is running normally since 2018-04-10 07:24:43.
+2018-04-10 07:30:05,990 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-10 07:24:43.
+2018-04-10 07:41:06,001 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-10 07:24:43.
+2018-04-10 08:25:05,985 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has not been auto-started and is running normally since 2018-04-10 08:24:45.
+2018-04-10 08:30:05,990 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-10 08:24:45.
+2018-04-10 08:41:05,988 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-10 08:24:45.
+2018-04-10 09:25:05,987 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has not been auto-started and is running normally since 2018-04-10 09:24:50.
+2018-04-10 09:31:06,987 [WARNING] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 2 times since 2018-04-10 09:24:50.
+2018-04-10 09:42:05,990 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has been auto-started 4 times since 2018-04-10 09:24:50.
+2018-04-10 10:06:55,252 [CRITICAL] [HARD] [ZOOKEEPER] [zookeeper_server_process] (ZooKeeper Server Process) Connection failed: [Errno 111] 拒绝连接 to zwq1:2181
+2018-04-10 10:06:55,256 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_process] (Metrics Collector Process) Connection failed: [Errno 111] 拒绝连接
+ to zwq2:6188
+2018-04-10 10:06:55,262 [OK] [HARD] [AMBARI_METRICS] [ams_metrics_collector_autostart] (Metrics Collector - Auto-Restart Status) Metrics Collector has not been auto-started and is running normally.
+2018-04-10 10:06:55,263 [CRITICAL] [HARD] [ZOOKEEPER] [zookeeper_server_process] (ZooKeeper Server Process) Connection failed: [Errno 111] 拒绝连接 to zwq2:2181
+2018-04-10 10:06:55,265 [CRITICAL] [HARD] [AMBARI_METRICS] [ams_metrics_collector_hbase_master_process] (Metrics Collector - HBase Master Process) Connection failed: [Errno 111] 拒绝连接 to zwq2:61310
+2018-04-10 10:06:55,277 [CRITICAL] [HARD] [ZOOKEEPER] [zookeeper_server_process_percent] (Percent ZooKeeper Servers Available) affected: [3], total: [3]
+~                                                           
