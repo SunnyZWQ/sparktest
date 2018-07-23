@@ -15,12 +15,14 @@
 
 ### Introduction to statistical learning
 
-- [ ] 统计思想
-- [ ] 统计算法分类
-- [ ] 常用算法
+- [x] 统计思想
+- [x] 统计算法分类
+- [x] 常用算法
 
 
-
+- [x] 统计学距离算法
+- [ ] lstm
+- [ ] 工业中的RCA落地
 
 
 
