@@ -55,7 +55,7 @@ datasource包含的组件:
 - driver
 - transformer
 
-# 3 流程介绍
+# 3 Vitrage工作流程
 
 构建Graph--->对Graph分析（推断alarm，RCA）
 
