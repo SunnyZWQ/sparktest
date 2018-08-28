@@ -62,14 +62,22 @@ hist(x) 生成向量x的直方图
 
 >在启动一个R会话时使用setwd()命令指定到某一个项目的路径，后接不加选项的load()命令。这样做可以让我从上一次会话结束的地方重新开始，并保证各个项目之间的数据和设置互不干扰。
 
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fuo9pqb8etj31zo136k4u.jpg)
+
+    source("filename.R")
+
+在当前会话中执行一个脚本filename.R。扩展名.R不是必须的。
+
+    sink("filename")
+
+将输出重定向到文件filename中。如果文件已经存在，则它的内容将被覆盖。
+
+    参数 append=TRUE 可将文本追加到文件后。
+    参数 split=TRUE 可将输出同时发送到屏幕和输出文件中。
+    不加参数调用sink()将仅向屏幕返回输出结果。
 
 
-
-
-
-
-
-
+![](http://ww1.sinaimg.cn/large/005N2p5vly1fuo9xnguwsj31zm0l4q7h.jpg)
 
 
 
