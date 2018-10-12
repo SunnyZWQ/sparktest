@@ -54,17 +54,58 @@ streaming笔记输出
 - [ ] spark core —— 画图说明原理
 - [ ] storm和spark实现实时处理的原理——基于内存、秒级or毫秒级、算子
 
+----
+
+## 2018-09-03
 
 
+- python中的set类，用来构建和操作无序元素的集合，其中每个元素都是唯一的。常用法：membership testing，移除重复元素，在set上计算标准数学操作（交集、并集、区别、对称区别）
 
+#### rotate错误答案
 
+    class Solution(object):
+        def rotate(self, nums, k):
+            """
+            :type nums: List[int]
+            :type k: int
+            :rtype: void Do not return anything, modify nums in-place instead.
+            """
+            i = 0
+            for i in (0,k+1):
+                temp = nums[len(nums)-1]
+                for j in (0,len(nums)):
+                    nums[len(nums)-1]=nums[len(nums)-2]
+                    nums[0] = temp
+                print nums
+            print('最终结果')
+            print nums
+            return nums    
+            
 
+#### rotate正确答案
 
-
-
-
-
-
+    class Solution(object):
+        
+        def rotate(self, nums, k):
+            """
+            :type nums: List[int]
+            :type k: int
+            :rtype: void Do not return anything, modify nums in-place instead.
+            """
+            k = k % len(nums)
+            self.reverse(nums,0,len(nums)-1)
+            self.reverse(nums,0,k-1)
+            self.reverse(nums,k,len(nums)-1)
+            # return nums       
+            
+        def reverse(self, nums, start, end):
+            while(start<end):
+                temp = nums[start]
+                nums[start] = nums[end]
+                nums[end] = temp
+                start = start + 1
+                end = end - 1
+    
 
 
 
